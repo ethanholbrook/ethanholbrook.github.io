@@ -27,17 +27,33 @@ const imageAltText = "Ethan in Yosemite on a backpacking trip";
 const Home = ({ name, title }) => {
   return (
     <section id="home" className="min-height">
-      <img className="background" src={image} alt="" style={{ opacity: 0.90 }} />
-      <div style={{ position: "absolute", top: "5rem", left: "2rem", width: "25rem" }}>
+      <img className="background" src={image} alt="" style={{ opacity: 0.9 }} />
+      <div
+        style={{
+          position: "absolute",
+          top: "5rem",
+          left: "2rem",
+          width: "27rem",
+          boxShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)",
+        }}
+      >
         <h1
           className="name"
-          style={{ backgroundColor: "None", textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)" }}
+          style={{
+            backgroundColor: "darkgray",
+            textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)",
+            opacity: 0.8,
+          }}
         >
           {name}
         </h1>
         <h2
           className="title"
-          style={{ backgroundColor: "None", textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)" }}
+          style={{
+            backgroundColor: "darkgray",
+            textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)",
+            opacity: 0.8,
+          }}
         >
           {title}
         </h2>{" "}
