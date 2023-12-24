@@ -28634,7 +28634,7 @@ const Home = ({ name , title  })=>{
                 src: (0, _ethanYoseBackpackJpgDefault.default),
                 alt: "",
                 style: {
-                    opacity: 0.90
+                    opacity: 0.9
                 }
             }, void 0, false, {
                 fileName: "src/Components/Home.jsx",
@@ -28646,31 +28646,34 @@ const Home = ({ name , title  })=>{
                     position: "absolute",
                     top: "5rem",
                     left: "2rem",
-                    width: "25rem"
+                    width: "27rem",
+                    boxShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)"
                 },
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
                         className: "name",
                         style: {
-                            backgroundColor: "None",
-                            textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)"
+                            backgroundColor: "darkgray",
+                            textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)",
+                            opacity: 0.8
                         },
                         children: name
                     }, void 0, false, {
                         fileName: "src/Components/Home.jsx",
-                        lineNumber: 32,
+                        lineNumber: 40,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
                         className: "title",
                         style: {
-                            backgroundColor: "None",
-                            textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)"
+                            backgroundColor: "darkgray",
+                            textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)",
+                            opacity: 0.8
                         },
                         children: title
                     }, void 0, false, {
                         fileName: "src/Components/Home.jsx",
-                        lineNumber: 38,
+                        lineNumber: 50,
                         columnNumber: 9
                     }, undefined),
                     " "
@@ -28695,12 +28698,12 @@ const Home = ({ name , title  })=>{
                     alt: imageAltText
                 }, void 0, false, {
                     fileName: "src/Components/Home.jsx",
-                    lineNumber: 47,
+                    lineNumber: 63,
                     columnNumber: 9
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/Components/Home.jsx",
-                lineNumber: 46,
+                lineNumber: 62,
                 columnNumber: 7
             }, undefined)
         ]
