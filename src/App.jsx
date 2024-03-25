@@ -25,7 +25,7 @@ import "./styles.css";
  */
 const siteProps = {
   name: "Ethan Holbrook",
-  title: "Atomistic Modeler & Python Programmer",
+  title: "Atomistic Modeler & Software Developer",
   email: "ethanwholbrook@gmail.com",
   gitHub: "ethanholbrook",
   instagram: "ethanwholbrook",
