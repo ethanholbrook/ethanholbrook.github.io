@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
-import data from '../data/simulationsData.json'; // Adjust path as needed
+import data from "../data/simulationsData.json"; // Adjust path as needed
 
 const Dashboard = () => {
   const [selectedArchitecture, setSelectedArchitecture] = useState('All');
