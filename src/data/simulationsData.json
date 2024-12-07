@@ -1,0 +1,18 @@
+[
+    {
+      "architecture": "CPU",
+      "potential": "Lennard-Jones",
+      "atoms": 1000,
+      "electricity_kWh": 2.5,
+      "carbon_kgCO2": 1.2
+    },
+    {
+      "architecture": "GPU",
+      "potential": "AMBER",
+      "atoms": 5000,
+      "electricity_kWh": 5.1,
+      "carbon_kgCO2": 2.4
+    }
+    
+  ]
+  
