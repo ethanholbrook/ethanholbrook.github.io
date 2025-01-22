@@ -69179,7 +69179,6 @@ var prevRefreshSig = window.$RefreshSig$;
 $parcel$ReactRefreshHelpers$5305.prelude(module);
 
 try {
-// filepath: /workspaces/ethanholbrook.github.io/src/Components/Yosemite.jsx
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
@@ -69198,24 +69197,28 @@ const Yosemite = ()=>{
                 children: "Yosemite National Park"
             }, void 0, false, {
                 fileName: "src/Components/parks/Yosemite.jsx",
-                lineNumber: 8,
+                lineNumber: 7,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
                 src: (0, _yoseFallsJpgDefault.default),
                 alt: "Yosemite National Park",
                 style: {
-                    width: "100%"
+                    width: "100%",
+                    maxWidth: "600px",
+                    height: "auto",
+                    display: "block",
+                    margin: "0 auto"
                 }
             }, void 0, false, {
                 fileName: "src/Components/parks/Yosemite.jsx",
-                lineNumber: 9,
+                lineNumber: 8,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/Components/parks/Yosemite.jsx",
-        lineNumber: 7,
+        lineNumber: 6,
         columnNumber: 5
     }, undefined);
 };
@@ -69239,13 +69242,12 @@ var prevRefreshSig = window.$RefreshSig$;
 $parcel$ReactRefreshHelpers$3052.prelude(module);
 
 try {
-// filepath: /workspaces/ethanholbrook.github.io/src/Components/Zion.jsx
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
-var _angelLandingFrontJpg = require("../../images/nps/angel_landing_front.jpg"); // Adjust path as needed
+var _angelLandingFrontJpg = require("/src/images/nps/angel_landing_front.jpg"); // Adjust path as needed
 var _angelLandingFrontJpgDefault = parcelHelpers.interopDefault(_angelLandingFrontJpg);
 const Zion = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -69258,24 +69260,28 @@ const Zion = ()=>{
                 children: "Zion National Park"
             }, void 0, false, {
                 fileName: "src/Components/parks/Zion.jsx",
-                lineNumber: 8,
+                lineNumber: 7,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
                 src: (0, _angelLandingFrontJpgDefault.default),
                 alt: "Zion National Park",
                 style: {
-                    width: "100%"
+                    width: "100%",
+                    maxWidth: "600px",
+                    height: "auto",
+                    display: "block",
+                    margin: "0 auto"
                 }
             }, void 0, false, {
                 fileName: "src/Components/parks/Zion.jsx",
-                lineNumber: 9,
+                lineNumber: 8,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/Components/parks/Zion.jsx",
-        lineNumber: 7,
+        lineNumber: 6,
         columnNumber: 5
     }, undefined);
 };
@@ -69289,7 +69295,7 @@ $RefreshReg$(_c, "Zion");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../../images/nps/angel_landing_front.jpg":"bzayf","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"bzayf":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","/src/images/nps/angel_landing_front.jpg":"bzayf"}],"bzayf":[function(require,module,exports,__globalThis) {
 module.exports = require("ffb65f0ad03e3cca").getBundleURL('bLxZJ') + "angel_landing_front.872e6730.jpg" + "?" + Date.now();
 
 },{"ffb65f0ad03e3cca":"lgJ39"}],"bQpdj":[function(require,module,exports,__globalThis) {
