@@ -1,30 +1,19 @@
-/**
- * Application component
- *
- * To contain application wide settings, routes, state, etc.
- */
-
 import React from "react";
-// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import About from "./Components/About";
 import Footer from "./Components/Footer";
 import Header from "./Components/Header";
 import Home from "./Components/Home";
-import Portfolio from "./Components/Portfolio";
 import Dashboard from "./Components/Dashboard";
+import Menu from "./Components/Menu";
+import NationalParks from "./Components/NationalParks";
+import Yosemite from "./Components/parks/Yosemite";
+import Zion from "./Components/parks/Zion";
+import Resume from "./Components/Resume"; // Import the new Resume component
 
 import "./styles.css";
 
-/**
- * This object represents your information. The project is set so that you
- * only need to update these here, and values are passed as properties to the
- * components that need that information.
- *
- * Update the values below with your information.
- *
- * If you don't have one of the social sites listed, leave it as an empty string.
- */
 const siteProps = {
   name: "Ethan Holbrook",
   title: "Atomistic Modeler & Software Developer",
@@ -35,6 +24,7 @@ const siteProps = {
   medium: "",
   twitter: "ethanwholbrook",
   youTube: "",
+  scholar: "EevfYT0AAAAJ",
 };
 
 const primaryColor = "#4E567E";
@@ -46,20 +36,14 @@ const App = () => {
       <div id="main">
         <Header />
         <Routes>
-          {/* Root route - displays Home, About, and Portfolio as before */}
-          <Route
-            path="/"
-            element={
-              <>
-                <Home name={siteProps.name} title={siteProps.title} />
-                <About />
-                <Portfolio />
-              </>
-            }
-          />
-          
-          {/* New Dashboard route */}
+          <Route path="/" element={<Home title={siteProps.title} />} />
+          <Route path="/about" element={<About />} />
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/menu" element={<Menu />} />
+          <Route path="/national-parks" element={<NationalParks />} />
+          <Route path="/parks/yosemite" element={<Yosemite />} />
+          <Route path="/parks/zion" element={<Zion />} />
+          <Route path="/resume" element={<Resume />} /> {/* Add the new Resume route */}
         </Routes>
         <Footer
           {...siteProps}

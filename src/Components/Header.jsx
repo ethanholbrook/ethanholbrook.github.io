@@ -1,10 +1,5 @@
-/**
- * Header component
- *
- * Top navigation bar for your site. Set to remain visible as the
- * user scrolls so that they can constantly reach any part of your page.
- */
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -12,20 +7,25 @@ const Header = () => {
       style={{
         position: "fixed",
         display: "flex",
-        justifyContent: "center",
-        gap: "2rem",
+        justifyContent: "space-between",
+        alignItems: "center",
         background: "rgba(255,255,255,0.75)",
-        padding: "1rem",
+        padding: "1rem 2rem",
         top: 0,
         width: "100%",
         zIndex: 10,
+        boxSizing: "border-box", // Ensure padding is included in the width
       }}
     >
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#dashboard">Dashboard</a>
-      <a href="#footer">Contact</a>
+      <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start" }}>
+        <div style={{ fontWeight: "bold", fontSize: "1.5rem" }}>Ethan Holbrook</div>
+        <div style={{ fontSize: "1rem" }}>Atomistic Modeler & Software Developer</div>
+      </div>
+      <div style={{ display: "flex", alignItems: "center", gap: "2rem" }}>
+        <div style={{ height: "100%", width: "3px", backgroundColor: "black", margin: "0 1rem" }}></div>
+        <Link to="/" style={{ textDecoration: "none", color: "black" }}>Home</Link>
+        <Link to="/about" style={{ textDecoration: "none", color: "black" }}>About</Link>
+      </div>
     </div>
   );
 };

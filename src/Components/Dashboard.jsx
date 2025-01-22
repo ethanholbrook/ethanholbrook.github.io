@@ -25,7 +25,7 @@ const Dashboard = () => {
   const potentials = ['All', ...new Set(data.map(d => d.potential))];
 
   return (
-    <div style={{ padding: '20px' }}>
+    <div style={{ padding: '20px', marginTop: '60px' }}>
       <h1>Simulation Energy & Carbon Dashboard</h1>
       <p>
         Explore the energy consumption (electricity) and carbon emissions associated with running molecular dynamics simulations. Filter by architecture, potential type, and system size.

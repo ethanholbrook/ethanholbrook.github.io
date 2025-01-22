@@ -1,79 +1,98 @@
-/**
- * Home component
- *
- * The section at the top of the page to display image of your
- * choice, name and title that describes your career focus.
- */
-
-import React from "react";
-import arrowSvg from "../images/down-arrow.svg";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
-
-/**
- * Home background image
- *
- * Below is a sample image. Upload the image of your choice into the "images"
- * directory and import here for use. Then, set imageAltText to string that 
- * represents what you see in that image.
- *
- *
- * Need an image? Check out https://unsplash.com to download a photo you
- * freely use on your site.
- */
 import image from "../images/Ethan-Yose-Backpack.jpg";
 
 const imageAltText = "Ethan in Yosemite on a backpacking trip";
 
-const Home = ({ name, title }) => {
+const Home = () => {
+  const [hovered, setHovered] = useState(null);
+
+  const handleMouseEnter = (index) => {
+    setHovered(index);
+  };
+
+  const handleMouseLeave = () => {
+    setHovered(null);
+  };
+
   return (
-    <section id="home" className="min-height">
-      <img className="background" src={image} alt="" style={{ opacity: 0.9 }} />
+    <section
+      id="home"
+      className="min-height"
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+        textAlign: "center",
+        height: "100vh", // Full height viewport
+        backgroundImage: `url(${image})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        opacity: 0.9,
+        padding: "20px",
+      }}
+    >
       <div
         style={{
-          position: "absolute",
-          top: "5rem",
-          left: "2rem",
-          width: "27rem",
-          boxShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)",
+          display: "flex",
+          flexDirection: "column",
+          gap: "20px",
+          width: "100%",
+          maxWidth: "400px",
         }}
       >
-        <h1
-          className="name"
-          style={{
-            backgroundColor: "darkgray",
-            textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)",
-            opacity: 0.8,
-          }}
-        >
-          {name}
-        </h1>
-        <h2
-          className="title"
-          style={{
-            backgroundColor: "darkgray",
-            textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)",
-            opacity: 0.8,
-          }}
-        >
-          {title}
-        </h2>{" "}
-        {/* Add style for white background */}
-      </div>
-      <div style={{ position: "absolute", bottom: "3rem", left: "50%" }}>
-        <img src={arrowSvg} style={{ height: "3rem", width: "3rem" }} alt={imageAltText} />
+        {links.map((link, index) => (
+          <Link to={link.path} style={{ textDecoration: "none" }} key={index}>
+            <div
+              style={{
+                ...buttonStyle,
+                ...(hovered === index ? buttonHoverStyle : {}),
+              }}
+              onMouseEnter={() => handleMouseEnter(index)}
+              onMouseLeave={handleMouseLeave}
+            >
+              {link.label}
+            </div>
+          </Link>
+        ))}
       </div>
     </section>
   );
 };
 
-Home.defaultProps = {
-  name: "",
-  title: "",
+const links = [
+  { path: "/dashboard", label: "Dashboard" },
+  { path: "/menu", label: "Menu" },
+  { path: "/national-parks", label: "National Parks" },
+  { path: "/resume", label: "Resume" },
+];
+
+// Sleek button styles
+const buttonStyle = {
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  height: "50px",
+  border: "2px solid #ffffff",
+  borderRadius: "25px",
+  backgroundColor: "rgba(0, 0, 0, 0.6)", // Semi-transparent black
+  color: "#ffffff",
+  fontSize: "18px",
+  fontWeight: "bold",
+  letterSpacing: "1px",
+  transition: "all 0.3s ease",
+  cursor: "pointer",
+  textAlign: "center",
 };
 
-Home.propTypes = {
-  name: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
+// Hover styles for the buttons
+const buttonHoverStyle = {
+  backgroundColor: "#ffffff", // Switch to white
+  color: "#000000", // Text turns black
+  transform: "scale(1.1)", // Slight enlargement
+  boxShadow: "0 4px 10px rgba(0, 0, 0, 0.4)", // Shadow for depth
 };
 
 export default Home;
