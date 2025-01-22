@@ -35101,8 +35101,8 @@ _s(Home, "mEhKvegbaT+HE5gyL2KiZdVDWeQ=");
 _c = Home;
 const links = [
     {
-        path: "/dashboard",
-        label: "Dashboard"
+        path: "/resume",
+        label: "Resume"
     },
     {
         path: "/menu",
@@ -35113,8 +35113,8 @@ const links = [
         label: "National Parks"
     },
     {
-        path: "/resume",
-        label: "Resume"
+        path: "/dashboard",
+        label: "Energy Use"
     }
 ];
 // Sleek button styles
@@ -35134,7 +35134,7 @@ const buttonStyle = {
     cursor: "pointer",
     textAlign: "center"
 };
-// Hover styles for the buttons
+// Hover styles for sleek buttons
 const buttonHoverStyle = {
     backgroundColor: "#ffffff",
     color: "#000000",
