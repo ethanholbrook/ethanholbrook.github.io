@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import image from "../images/Ethan-Yose-Backpack.jpg";
 
-const imageAltText = "Ethan in Yosemite on a backpacking trip";
+// const imageAltText = "Ethan in Yosemite on a backpacking trip";
 
 const Home = () => {
   const [hovered, setHovered] = useState(null);
@@ -36,24 +36,23 @@ const Home = () => {
     >
       <div
         style={{
-          display: "flex",
-          flexDirection: "column",
+          display: "grid",
+          gridTemplateColumns: "repeat(2, 1fr)",
           gap: "20px",
-          width: "100%",
-          maxWidth: "400px",
+          marginTop: "20px",
         }}
       >
         {links.map((link, index) => (
           <Link to={link.path} style={{ textDecoration: "none" }} key={index}>
             <div
               style={{
-                ...buttonStyle,
-                ...(hovered === index ? buttonHoverStyle : {}),
+                ...boxStyle,
+                ...(hovered === index ? boxHoverStyle : {}),
               }}
               onMouseEnter={() => handleMouseEnter(index)}
               onMouseLeave={handleMouseLeave}
             >
-              {link.label}
+              <h2>{link.label}</h2>
             </div>
           </Link>
         ))}
@@ -69,30 +68,32 @@ const links = [
   { path: "/resume", label: "Resume" },
 ];
 
-// Sleek button styles
-const buttonStyle = {
+const boxStyle = {
+  width: "200px",
+  height: "150px",
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
-  height: "50px",
-  border: "2px solid #ffffff",
-  borderRadius: "25px",
-  backgroundColor: "rgba(0, 0, 0, 0.6)", // Semi-transparent black
-  color: "#ffffff",
-  fontSize: "18px",
-  fontWeight: "bold",
-  letterSpacing: "1px",
-  transition: "all 0.3s ease",
+  background: "linear-gradient(135deg, #6B73FF 0%, #000DFF 100%)",
+  color: "white",
+  borderRadius: "10px",
+  boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
+  transition: "transform 0.3s, box-shadow 0.3s",
   cursor: "pointer",
-  textAlign: "center",
 };
 
-// Hover styles for the buttons
-const buttonHoverStyle = {
-  backgroundColor: "#ffffff", // Switch to white
-  color: "#000000", // Text turns black
-  transform: "scale(1.1)", // Slight enlargement
-  boxShadow: "0 4px 10px rgba(0, 0, 0, 0.4)", // Shadow for depth
+const boxHoverStyle = {
+  transform: "scale(1.05)",
+  boxShadow: "0 8px 16px rgba(0, 0, 0, 0.3)",
+  background: "linear-gradient(135deg, #FF6B6B 0%, #FF0000 100%)",
+};
+
+Home.defaultProps = {
+  title: "",
+};
+
+Home.propTypes = {
+  title: PropTypes.string.isRequired,
 };
 
 export default Home;
