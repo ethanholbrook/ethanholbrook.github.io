@@ -60,10 +60,10 @@ const Home = () => {
 };
 
 const links = [
-  { path: "/dashboard", label: "Dashboard" },
+  { path: "/resume", label: "Resume" },
   { path: "/menu", label: "Menu" },
   { path: "/national-parks", label: "National Parks" },
-  { path: "/resume", label: "Resume" },
+  { path: "/dashboard", label: "Energy Use" }, // Renamed Dashboard button
 ];
 
 // Sleek button styles
@@ -84,10 +84,10 @@ const buttonStyle = {
   textAlign: "center",
 };
 
-// Hover styles for the buttons
+// Hover styles for sleek buttons
 const buttonHoverStyle = {
-  backgroundColor: "#ffffff", // Switch to white
-  color: "#000000", // Text turns black
+  backgroundColor: "#ffffff", // White background on hover
+  color: "#000000", // Black text on hover
   transform: "scale(1.1)", // Slight enlargement
   boxShadow: "0 4px 10px rgba(0, 0, 0, 0.4)", // Shadow for depth
 };

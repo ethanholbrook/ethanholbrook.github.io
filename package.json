@@ -1,7 +1,7 @@
 {
   "name": "ethanholbrook.github.io",
   "version": "1.0.0",
-  "description": "Ethan Holbrook's Personal Website",
+  "description": "Ethan Holbrook",
   "source": "src/index.html",
   "homepage": "https://ethanholbrook.github.io",
   "scripts": {
