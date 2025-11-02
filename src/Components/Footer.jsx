@@ -3,6 +3,7 @@ import React from "react";
 const Footer = ({ primaryColor, secondaryColor, ...props }) => {
   return (
     <footer
+      id="site-footer"                                 // ⬅️ added
       style={{
         background: `linear-gradient(45deg, ${primaryColor}, ${secondaryColor})`,
         color: "white",
@@ -10,8 +11,12 @@ const Footer = ({ primaryColor, secondaryColor, ...props }) => {
         textAlign: "center",
         position: "fixed",
         bottom: 0,
+        left: 0,
+        right: 0,
         width: "100%",
+        zIndex: 1000,
       }}
+      role="contentinfo"
     >
       <p>&copy; {new Date().getFullYear()} {props.name}. All rights reserved.</p>
       <div>

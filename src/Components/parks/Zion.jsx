@@ -1,5 +1,5 @@
 import React from "react";
-import zionImage from "/src/images/nps/angel_landing_front.jpg"; // Adjust path as needed
+const zionImage = new URL("/src/images/nps/angel_landing_front.jpg", import.meta.url).href;
 
 const Zion = () => {
   return (

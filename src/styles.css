@@ -123,3 +123,6 @@ img.socialIcon {
   height: 30px;
   width: 30px;
 }
+
+/* :root { --header-h: 80px; --footer-h: 56px; }
+html, body, #root, #main { height: 100%; } */

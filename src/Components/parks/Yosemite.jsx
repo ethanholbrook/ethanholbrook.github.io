@@ -1,5 +1,5 @@
 import React from "react";
-import yosemiteImage from "/src/images/nps/yose_falls.jpg"; // Adjust path as needed
+const yosemiteImage = new URL("../../images/nps/yose_falls.jpg", import.meta.url).href;
 
 const Yosemite = () => {
   return (

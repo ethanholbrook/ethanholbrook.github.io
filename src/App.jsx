@@ -13,6 +13,7 @@ import NationalParks from "./Components/NationalParks";
 import Yosemite from "./Components/parks/Yosemite";
 import Zion from "./Components/parks/Zion";
 import Resume from "./Components/Resume";
+import FixedFrame from "./Layout/FixedFrame";
 
 import "./styles.css";
 
@@ -39,18 +40,26 @@ const App = () => {
         <title>Ethan Holbrook</title>
         <meta name="description" content="Ethan Holbrook's personal website." />
       </Helmet>
+
       <div id="main">
+        {/* Fixed site-wide header (be sure it has id="site-header" in Header.jsx) */}
         <Header />
-        <Routes>
-          <Route path="/" element={<Home title={siteProps.title} />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/menu" element={<Menu />} />
-          <Route path="/national-parks" element={<NationalParks />} />
-          <Route path="/parks/yosemite" element={<Yosemite />} />
-          <Route path="/parks/zion" element={<Zion />} />
-          <Route path="/resume" element={<Resume />} />
-        </Routes>
+
+        {/* Content wrapper that spaces content between fixed header & footer */}
+        <FixedFrame>
+          <Routes>
+            <Route path="/" element={<Home title={siteProps.title} />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/menu" element={<Menu />} />
+            <Route path="/national-parks" element={<NationalParks />} />
+            <Route path="/parks/yosemite" element={<Yosemite />} />
+            <Route path="/parks/zion" element={<Zion />} />
+            <Route path="/resume" element={<Resume />} />
+          </Routes>
+        </FixedFrame>
+
+        {/* Fixed site-wide footer (be sure it has id="site-footer" in Footer.jsx) */}
         <Footer
           {...siteProps}
           primaryColor={primaryColor}

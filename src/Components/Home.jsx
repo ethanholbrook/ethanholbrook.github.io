@@ -1,54 +1,36 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
-import image from "../images/Ethan-Yose-Backpack.jpg";
+
+// A) src import:
+const bg = new URL("../images/Ethan-Yose-Backpack.jpg", import.meta.url).href;
+// B) public path:
+// const bg = "/images/Ethan-Yose-Backpack.jpg";
 
 const Home = () => {
   const [hovered, setHovered] = useState(null);
-
-  const handleMouseEnter = (index) => {
-    setHovered(index);
-  };
-
-  const handleMouseLeave = () => {
-    setHovered(null);
-  };
-
   return (
     <section
       id="home"
       style={{
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
+        minHeight: "calc(100vh - var(--header-h, 80px) - var(--footer-h, 56px))",
+        display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center",
         textAlign: "center",
-        height: "100vh", // Full height viewport
-        backgroundImage: `url(${image})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        opacity: 0.9,
-        padding: "20px",
+        backgroundImage: bg ? `url(${bg})` : "linear-gradient(135deg,#111,#333)",
+        backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat",
+        position: "relative", padding: 20,
       }}
     >
       <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          gap: "20px",
-          width: "100%",
-          maxWidth: "400px",
-        }}
-      >
-        {links.map((link, index) => (
-          <Link to={link.path} style={{ textDecoration: "none" }} key={index}>
+        aria-hidden="true"
+        style={{ position:"absolute", inset:0, background:"rgba(0,0,0,0.18)", pointerEvents:"none" }}
+      />
+      <div style={{ position:"relative", display:"flex", flexDirection:"column", gap:20, width:"100%", maxWidth:400 }}>
+        {links.map((link, i) => (
+          <Link to={link.path} style={{ textDecoration: "none" }} key={i}>
             <div
-              style={{
-                ...buttonStyle,
-                ...(hovered === index ? buttonHoverStyle : {}),
-              }}
-              onMouseEnter={() => handleMouseEnter(index)}
-              onMouseLeave={handleMouseLeave}
+              style={{ ...buttonStyle, ...(hovered === i ? buttonHoverStyle : {}) }}
+              onMouseEnter={() => setHovered(i)} onMouseLeave={() => setHovered(null)}
             >
               {link.label}
             </div>
@@ -63,41 +45,14 @@ const links = [
   { path: "/resume", label: "Resume" },
   { path: "/menu", label: "Menu" },
   { path: "/national-parks", label: "National Parks" },
-  { path: "/dashboard", label: "Energy Use" }, // Renamed Dashboard button
+  { path: "/dashboard", label: "Energy Use" },
 ];
 
-// Sleek button styles
-const buttonStyle = {
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
-  height: "50px",
-  border: "2px solid #ffffff",
-  borderRadius: "25px",
-  backgroundColor: "rgba(0, 0, 0, 0.6)", // Semi-transparent black
-  color: "#ffffff",
-  fontSize: "18px",
-  fontWeight: "bold",
-  letterSpacing: "1px",
-  transition: "all 0.3s ease",
-  cursor: "pointer",
-  textAlign: "center",
-};
+const buttonStyle = { display:"flex", justifyContent:"center", alignItems:"center", height:50,
+  border:"2px solid #fff", borderRadius:25, backgroundColor:"rgba(0,0,0,.6)",
+  color:"#fff", fontSize:18, fontWeight:"bold", letterSpacing:1, transition:"all .3s", cursor:"pointer" };
+const buttonHoverStyle = { background:"#fff", color:"#000", transform:"scale(1.1)", boxShadow:"0 4px 10px rgba(0,0,0,.4)" };
 
-// Hover styles for sleek buttons
-const buttonHoverStyle = {
-  backgroundColor: "#ffffff", // White background on hover
-  color: "#000000", // Black text on hover
-  transform: "scale(1.1)", // Slight enlargement
-  boxShadow: "0 4px 10px rgba(0, 0, 0, 0.4)", // Shadow for depth
-};
-
-Home.defaultProps = {
-  title: "",
-};
-
-Home.propTypes = {
-  title: PropTypes.string.isRequired,
-};
-
+Home.defaultProps = { title: "" };
+Home.propTypes = { title: PropTypes.string.isRequired };
 export default Home;

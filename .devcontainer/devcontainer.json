@@ -6,18 +6,14 @@
   "hostRequirements": {
     "cpus": 4
   },
-  "waitFor": "onCreateCommand",
-  "updateContentCommand": "npm install",
-  "postCreateCommand": "",
-  "postAttachCommand": {
-    "server": "npm start"
-  },
 
-  // Configure tool-specific properties.
+  "onCreateCommand": "npm install",
+  "waitFor": "onCreateCommand",
+
+  "postAttachCommand": "npm start",
+
   "customizations": {
-    // Configure properties specific to VS Code.
     "vscode": {
-      // Add the IDs of extensions you want installed when the container is created.
       "extensions": [
         "dbaeumer.vscode-eslint",
         "esbenp.prettier-vscode",
@@ -45,6 +41,5 @@
       "onAutoForward": "openPreview"
     }
   },
-
   "forwardPorts": [1234]
 }
