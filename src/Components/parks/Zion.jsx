@@ -1,22 +1,17 @@
 import React from "react";
-const zionImage = new URL("/src/images/nps/angel_landing_front.jpg", import.meta.url).href;
+
+const zionImage = new URL("../../images/nps/angel_landing_front.jpg", import.meta.url).href;
 
 const Zion = () => {
   return (
-    <div style={{ padding: "20px", marginTop: "60px" }}>
-      <h1>Zion National Park</h1>
-      <img
-        src={zionImage}
-        alt="Zion National Park"
-        style={{
-          width: "100%",
-          maxWidth: "600px", // Set a max width for larger screens
-          height: "auto",
-          display: "block",
-          margin: "0 auto", // Center the image
-        }}
-      />
-    </div>
+    <main className="park-detail-page">
+      <section className="park-detail-shell">
+        <p className="parks-kicker">National Parks</p>
+        <h1 className="parks-title">Zion National Park</h1>
+        <p className="parks-copy">Desert sandstone, steep trails, and canyon light.</p>
+        <img src={zionImage} alt="Zion National Park ridge and canyon landscape" className="park-detail-image" />
+      </section>
+    </main>
   );
 };
 

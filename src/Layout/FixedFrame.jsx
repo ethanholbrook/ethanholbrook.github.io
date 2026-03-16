@@ -34,7 +34,7 @@ export default function FixedFrame({ children }) {
     <div
       style={{
         boxSizing: "border-box",
-        paddingTop: "var(--header-h, 0px)",
+        paddingTop: "calc(var(--header-h, 0px) + 8px)",
         paddingBottom: "var(--footer-h, 0px)",
         minHeight:
           "calc(100vh - var(--header-h, 0px) - var(--footer-h, 0px))",

@@ -3,27 +3,19 @@ import React from "react";
 const Footer = ({ primaryColor, secondaryColor, ...props }) => {
   return (
     <footer
-      id="site-footer"                                 // ⬅️ added
-      style={{
-        background: `linear-gradient(45deg, ${primaryColor}, ${secondaryColor})`,
-        color: "white",
-        padding: "1rem",
-        textAlign: "center",
-        position: "fixed",
-        bottom: 0,
-        left: 0,
-        right: 0,
-        width: "100%",
-        zIndex: 1000,
-      }}
+      id="site-footer"
+      className="site-footer"
+      style={{ background: `linear-gradient(45deg, ${primaryColor}, ${secondaryColor})` }}
       role="contentinfo"
     >
-      <p>&copy; {new Date().getFullYear()} {props.name}. All rights reserved.</p>
-      <div>
-        <a href={`https://github.com/${props.gitHub}`} style={{ color: "white", margin: "0 10px" }}>GitHub</a>
-        <a href={`https://linkedin.com/in/${props.linkedIn}`} style={{ color: "white", margin: "0 10px" }}>LinkedIn</a>
-        <a href={`https://twitter.com/${props.twitter}`} style={{ color: "white", margin: "0 10px" }}>Twitter</a>
-        <a href={`https://scholar.google.com/citations?user=${props.scholar}`} style={{ color: "white", margin: "0 10px" }}>Scholar</a>
+      <p className="site-footer-copy">&copy; {new Date().getFullYear()} {props.name}</p>
+      <div className="site-footer-links">
+        <a href={`https://github.com/${props.gitHub}`} className="site-footer-link">GitHub</a>
+        <a href={`https://linkedin.com/in/${props.linkedIn}`} className="site-footer-link">LinkedIn</a>
+        <a href={`https://twitter.com/${props.twitter}`} className="site-footer-link">Twitter</a>
+        <a href={`https://scholar.google.com/citations?user=${props.scholar}`} className="site-footer-link">
+          Scholar
+        </a>
       </div>
     </footer>
   );
