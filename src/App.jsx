@@ -28,8 +28,8 @@ const siteProps = {
   scholar: "EevfYT0AAAAJ",
 };
 
-const primaryColor = "#4E567E";
-const secondaryColor = "#D2F1E4";
+const primaryColor = "#1f4a36";
+const secondaryColor = "#3f8f68";
 
 const App = () => {
   return (

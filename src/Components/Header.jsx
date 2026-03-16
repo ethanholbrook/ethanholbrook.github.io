@@ -31,7 +31,7 @@ const Header = () => {
             isActive ? "header-link header-link-active" : "header-link"
           }
         >
-          National Parks
+          Parks
         </NavLink>
       </nav>
     </header>

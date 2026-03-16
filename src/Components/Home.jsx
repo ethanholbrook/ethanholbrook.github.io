@@ -26,17 +26,20 @@ const publications = [
       "Modeling Framework to Predict Melting Dynamics at Microstructural Defects in TNT-HMX High Explosive Composites",
     venue: "Journal of Physical Chemistry C (2025)",
     detail: "Holbrook et al. DOI: 10.1021/acs.jpcc.5c02261",
+    url: "https://doi.org/10.1021/acs.jpcc.5c02261",
   },
   {
     title: "High strain rate deformation mechanisms in fcc alloys as a function of load triaxiality",
     venue: "Physical Review Materials (2025)",
     detail: "Li, Mishra, Holbrook, Ezenwata, Strachan. DOI: 10.1103/ljzt-x6k4",
+    url: "https://link.aps.org/doi/10.1103/ljzt-x6k4",
   },
   {
     title:
       "GPT-4 as an interface between researchers and computational software: improving usability and reproducibility",
     venue: "arXiv preprint (2023)",
     detail: "Verduzco, Holbrook, Strachan. arXiv:2310.11458",
+    url: "https://arxiv.org/abs/2310.11458",
   },
 ];
 
@@ -82,7 +85,11 @@ const Home = ({ title = "" }) => {
           <div className="pub-grid">
             {publications.map((item) => (
               <article className="pub-card" key={item.title}>
-                <h3>{item.title}</h3>
+                <h3>
+                  <a href={item.url} target="_blank" rel="noreferrer" className="pub-link">
+                    {item.title}
+                  </a>
+                </h3>
                 <p className="pub-venue">{item.venue}</p>
                 <p>{item.detail}</p>
               </article>

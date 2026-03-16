@@ -30,8 +30,7 @@ const NationalParks = () => {
   return (
     <main className="parks-page">
       <section className="parks-hero">
-        <p className="parks-kicker">Field Notes</p>
-        <h1 className="parks-title">National Parks</h1>
+        <h1 className="parks-title">Parks Gallery</h1>
         <p className="parks-copy">
           A growing collection of photos from hikes and road trips. Open any card to view park
           pages.

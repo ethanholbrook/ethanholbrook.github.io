@@ -172,7 +172,6 @@ export default function Menu() {
     <main className="menu-page">
       <div className="menu-shell">
         <section className="menu-hero">
-          <p className="menu-kicker">Personal Kitchen Log</p>
           <h1 className="menu-title">Menu</h1>
           <p className="menu-copy">
             A collection of dishes I like cooking. Tap any card for nutrition and ingredients.
