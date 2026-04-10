@@ -2,9 +2,9 @@
 // https://github.com/devcontainers/images/tree/main/src/javascript-node
 {
   "name": "JavaScript Portfolio Site with GitHub Codespaces",
-  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:20",
   "hostRequirements": {
-    "cpus": 4
+    "cpus": 2
   },
 
   "onCreateCommand": "npm install",
@@ -17,9 +17,7 @@
       "extensions": [
         "dbaeumer.vscode-eslint",
         "esbenp.prettier-vscode",
-        "GitHub.copilot",
-        "ms-vscode.azure-account",
-        "ms-azuretools.vscode-azurestaticwebapps"
+        "GitHub.copilot"
       ],
       "settings": {
         "emmet.includeLanguages": {
@@ -31,8 +29,7 @@
   },
 
   "features": {
-    "ghcr.io/devcontainers/features/github-cli:1": {},
-    "ghcr.io/devcontainers/features/azure-cli:1": {}
+    "ghcr.io/devcontainers/features/github-cli:1": {}
   },
 
   "portsAttributes": {
