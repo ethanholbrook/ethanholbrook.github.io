@@ -1,0 +1,12 @@
+{
+  "name": "Ethan Holbrook",
+  "short_name": "Ethan Holbrook",
+  "icons": [
+    { "src": "https://ethanholbrook.github.io/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "https://ethanholbrook.github.io/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ],
+  "theme_color": "#2f6d50",
+  "background_color": "#2f6d50",
+  "display": "standalone",
+  "start_url": "https://ethanholbrook.github.io/"
+}
