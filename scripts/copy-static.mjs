@@ -18,3 +18,11 @@ console.log(`Copied ${STATIC_DIR}/ → ${DIST_DIR}/`);
 
 copyFileSync(`${DIST_DIR}/index.html`, `${DIST_DIR}/404.html`);
 console.log(`Wrote ${DIST_DIR}/404.html (SPA fallback)`);
+
+// `gh-pages -d dist` replaces the gh-pages branch with dist/, so include the
+// README to keep the repo's front page populated when gh-pages is the default
+// branch. Harmless when served (unlinked).
+if (existsSync("README.md")) {
+  copyFileSync("README.md", `${DIST_DIR}/README.md`);
+  console.log(`Copied README.md → ${DIST_DIR}/`);
+}
