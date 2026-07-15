@@ -1,17 +1,21 @@
 // filepath: /workspaces/ethanholbrook.github.io/src/App.jsx
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import { Helmet } from "react-helmet";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 
+// Site-wide chrome loads eagerly; each route is code-split so a visitor only
+// downloads the JavaScript for the page they're on (e.g. the Dashboard's
+// charting library is no longer part of the initial homepage bundle).
 import Footer from "./Components/Footer";
 import Header from "./Components/Header";
-import Home from "./Components/Home";
-import Dashboard from "./Components/Dashboard";
-import Menu from "./Components/Menu";
-import NationalParks from "./Components/NationalParks";
-import Yosemite from "./Components/parks/Yosemite";
-import Zion from "./Components/parks/Zion";
 import FixedFrame from "./Layout/FixedFrame";
+
+const Home = lazy(() => import("./Components/Home"));
+const Dashboard = lazy(() => import("./Components/Dashboard"));
+const Menu = lazy(() => import("./Components/Menu"));
+const NationalParks = lazy(() => import("./Components/NationalParks"));
+const Yosemite = lazy(() => import("./Components/parks/Yosemite"));
+const Zion = lazy(() => import("./Components/parks/Zion"));
 
 import "./styles.css";
 
@@ -45,16 +49,18 @@ const App = () => {
 
         {/* Content wrapper that spaces content between fixed header & footer */}
         <FixedFrame>
-          <Routes>
-            <Route path="/" element={<Home title={siteProps.title} />} />
-            <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/menu" element={<Menu />} />
-            <Route path="/national-parks" element={<NationalParks />} />
-            <Route path="/parks/yosemite" element={<Yosemite />} />
-            <Route path="/parks/zion" element={<Zion />} />
-            <Route path="/about" element={<Navigate to="/" replace />} />
-            <Route path="/resume" element={<Navigate to="/" replace />} />
-          </Routes>
+          <Suspense fallback={null}>
+            <Routes>
+              <Route path="/" element={<Home title={siteProps.title} />} />
+              <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/menu" element={<Menu />} />
+              <Route path="/national-parks" element={<NationalParks />} />
+              <Route path="/parks/yosemite" element={<Yosemite />} />
+              <Route path="/parks/zion" element={<Zion />} />
+              <Route path="/about" element={<Navigate to="/" replace />} />
+              <Route path="/resume" element={<Navigate to="/" replace />} />
+            </Routes>
+          </Suspense>
         </FixedFrame>
 
         {/* Fixed site-wide footer (be sure it has id="site-footer" in Footer.jsx) */}
