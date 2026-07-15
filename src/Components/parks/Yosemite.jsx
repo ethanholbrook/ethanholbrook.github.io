@@ -1,6 +1,6 @@
 import React from "react";
 
-const yosemiteImage = new URL("../../images/nps/yose_falls.jpg", import.meta.url).href;
+const yosemiteImage = new URL("../../images/nps/yose_falls.jpg?as=webp&width=1920&quality=80", import.meta.url).href;
 
 const Yosemite = () => {
   return (

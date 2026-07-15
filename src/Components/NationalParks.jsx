@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const yosemite = new URL("../images/nps/yose_falls.jpg", import.meta.url).href;
-const zionFront = new URL("../images/nps/angel_landing_front.jpg", import.meta.url).href;
-const zionBack = new URL("../images/nps/angel_landing_back.jpg", import.meta.url).href;
+const yosemite = new URL("../images/nps/yose_falls.jpg?as=webp&width=1000&quality=80", import.meta.url).href;
+const zionFront = new URL("../images/nps/angel_landing_front.jpg?as=webp&width=1000&quality=80", import.meta.url).href;
+const zionBack = new URL("../images/nps/angel_landing_back.jpg?as=webp&width=1000&quality=80", import.meta.url).href;
 
 const parks = [
   {

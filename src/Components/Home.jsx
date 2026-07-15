@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const profile = new URL("../images/Ethan-Yose-Backpack.jpg", import.meta.url).href;
+const profile = new URL("../images/Ethan-Yose-Backpack.jpg?as=webp&width=1920&quality=80", import.meta.url).href;
 const cvFile = new URL("../../EthanHolbrook_CV.pdf", import.meta.url).href;
 const resumeFile = new URL("../../EthanHolbrook_Resume.pdf", import.meta.url).href;
 

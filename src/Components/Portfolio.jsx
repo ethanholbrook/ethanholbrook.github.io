@@ -19,7 +19,7 @@ import React from "react";
  * Need an image? Check out https://unsplash.com to download a photo you
  * freely use on your site.
  */
-import image from "../images/trees-redwoods.jpg";
+import image from "../images/trees-redwoods.jpg?as=webp&width=1920&quality=80";
 
 const imageAltText = "trees from the redwoods";
 
