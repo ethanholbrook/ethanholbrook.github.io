@@ -1,6 +1,6 @@
 import React from "react";
 
-const zionImage = new URL("../../images/nps/angel_landing_front.jpg", import.meta.url).href;
+const zionImage = new URL("../../images/nps/angel_landing_front.jpg?as=webp&width=1920&quality=80", import.meta.url).href;
 
 const Zion = () => {
   return (

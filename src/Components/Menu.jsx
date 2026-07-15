@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 
-const bg = new URL("../images/Ethan-Yose-Backpack.jpg", import.meta.url).href;
-const vegScramble = new URL("../images/menu-items/veg-scramble.jpg", import.meta.url).href;
-const brocCash = new URL("../images/menu-items/Broc_cash.jpg", import.meta.url).href;
-const peachDessert = new URL("../images/menu-items/peach_dessert.jpg", import.meta.url).href;
-const steakRice = new URL("../images/menu-items/steak_and_rice.jpg", import.meta.url).href;
-const steakVeg = new URL("../images/menu-items/steak_and_veg.jpg", import.meta.url).href;
-const sushi = new URL("../images/menu-items/sushi.png", import.meta.url).href;
-const chipotle = new URL("../images/menu-items/chipotle.jpg", import.meta.url).href;
-const bakedFish = new URL("../images/menu-items/baked_fish.jpg", import.meta.url).href;
+const bg = new URL("../images/Ethan-Yose-Backpack.jpg?as=webp&width=1920&quality=80", import.meta.url).href;
+const vegScramble = new URL("../images/menu-items/veg-scramble.jpg?as=webp&width=1000&quality=80", import.meta.url).href;
+const brocCash = new URL("../images/menu-items/Broc_cash.jpg?as=webp&width=1000&quality=80", import.meta.url).href;
+const peachDessert = new URL("../images/menu-items/peach_dessert.jpg?as=webp&width=1000&quality=80", import.meta.url).href;
+const steakRice = new URL("../images/menu-items/steak_and_rice.jpg?as=webp&width=1000&quality=80", import.meta.url).href;
+const steakVeg = new URL("../images/menu-items/steak_and_veg.jpg?as=webp&width=1000&quality=80", import.meta.url).href;
+const sushi = new URL("../images/menu-items/sushi.png?as=webp&width=1000&quality=80", import.meta.url).href;
+const chipotle = new URL("../images/menu-items/chipotle.jpg?as=webp&width=1000&quality=80", import.meta.url).href;
+const bakedFish = new URL("../images/menu-items/baked_fish.jpg?as=webp&width=1000&quality=80", import.meta.url).href;
 
 const menu = {
   appetizers: [
