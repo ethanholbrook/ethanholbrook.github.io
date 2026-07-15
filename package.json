@@ -7,7 +7,10 @@
   "scripts": {
     "start": "parcel",
     "copy-static": "node scripts/copy-static.mjs",
+    "clean": "rm -rf .parcel-cache dist",
+    "prebuild": "npm run clean",
     "build": "parcel build && npm run copy-static",
+    "prebuild-gh": "npm run clean",
     "build-gh": "parcel build --public-url 'https://ethanholbrook.github.io' && npm run copy-static",
     "predeploy": "npm run build-gh",
     "deploy": "gh-pages -d dist"
