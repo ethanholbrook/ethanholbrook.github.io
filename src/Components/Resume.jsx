@@ -37,6 +37,11 @@ const experience = [
 
 const publications = [
   {
+    title: "Evaluating LLM-generated code for domain-specific languages: Molecular dynamics with LAMMPS",
+    venue: "Computational Materials Science (2026)",
+    detail: "Holbrook, Verduzco, Strachan. DOI: 10.1016/j.commatsci.2026.114839",
+  },
+  {
     title: "Modeling Framework to Predict Melting Dynamics at Microstructural Defects in TNT-HMX High Explosive Composites",
     venue: "Journal of Physical Chemistry C (2025)",
     detail: "Holbrook et al. DOI: 10.1021/acs.jpcc.5c02261",
