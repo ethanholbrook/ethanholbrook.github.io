@@ -22,6 +22,12 @@ const focusAreas = [
 
 const publications = [
   {
+    title: "Shock-driven Jetting at HMX Crystal Surface Asperities",
+    venue: "arXiv preprint (2026)",
+    detail: "Holbrook, Kroonblawd, Springer, Strachan. arXiv:2611.05752",
+    url: "https://arxiv.org/abs/2611.05752",
+  },
+  {
     title:
       "Evaluating LLM-generated code for domain-specific languages: Molecular dynamics with LAMMPS",
     venue: "Computational Materials Science (2026)",
