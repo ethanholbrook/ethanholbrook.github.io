@@ -7,6 +7,8 @@ const Header = () => {
       <div className="header-brand">
         <div className="header-name">Ethan Holbrook</div>
       </div>
+      {/* Menu and Parks are intentionally unlisted while unfinished; they stay
+          reachable by URL (/menu, /parks). */}
       <nav className="header-nav" aria-label="Primary">
         <NavLink
           to="/"
@@ -16,22 +18,6 @@ const Header = () => {
           }
         >
           Home
-        </NavLink>
-        <NavLink
-          to="/menu"
-          className={({ isActive }) =>
-            isActive ? "header-link header-link-active" : "header-link"
-          }
-        >
-          Menu
-        </NavLink>
-        <NavLink
-          to="/national-parks"
-          className={({ isActive }) =>
-            isActive ? "header-link header-link-active" : "header-link"
-          }
-        >
-          Parks
         </NavLink>
       </nav>
     </header>

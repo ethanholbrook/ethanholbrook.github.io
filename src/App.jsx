@@ -54,6 +54,7 @@ const App = () => {
               <Route path="/" element={<Home title={siteProps.title} />} />
               <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/menu" element={<Menu />} />
+              <Route path="/parks" element={<NationalParks />} />
               <Route path="/national-parks" element={<NationalParks />} />
               <Route path="/parks/yosemite" element={<Yosemite />} />
               <Route path="/parks/zion" element={<Zion />} />
